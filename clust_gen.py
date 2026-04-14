@@ -9,16 +9,11 @@ import pickle
 import gzip
 from typing import List, Tuple, Dict, Union, Sequence, Any  
 
-
-
-
 def fastjet_antikt_clustering(in_filename:str, out_filename:str):
 
     def _open_pickle(path: str):
         with open(path, "rb") as f:
-            return pickle.load(f)
-    
-            
+            return pickle.load(f)       
         
     particle_list = _open_pickle(in_filename)
     jetdef = fastjet.JetDefinition(fastjet.antikt_algorithm, .4) # Anti-kT Clustering with R = .4
@@ -63,17 +58,12 @@ def fastjet_antikt_clustering(in_filename:str, out_filename:str):
     return ak.concatenate(jpt),ak.concatenate(jeta),ak.concatenate(jphi),ak.concatenate(cpt),ak.concatenate(ceta),ak.concatenate(cphi),ak.concatenate(ccharge),ak.concatenate(cmother),ak.concatenate(pdg)
 
 
-
-
-
-
-
 # run in the same directory where batch_00.pkl.gz ... batch_39.pkl.gz live
-for i in range(40):
-    in_file  = f"batch_{i:02d}.pkl.gz"
-    out_file = f"clustered_{i:02d}.pkl"
-    try:
-        fastjet_antikt_clustering(in_file, out_file)
-    except Exception as e:
-        print(f"Error clustering {in_file}: {e}")
-
+if __name__ == '__main__':
+    for i in range(40):
+        in_file  = f"batch_{i:02d}.pkl.gz"
+        out_file = f"clustered_{i:02d}.pkl"
+        try:
+            fastjet_antikt_clustering(in_file, out_file)
+        except Exception as e:
+            print(f"Error clustering {in_file}: {e}")
