@@ -1,0 +1,20 @@
+Beams:allowVariableEnergy=on.
+Beams:frameType=2.
+Beams:idA=2212. 
+Beams:idB=11. 
+Beams:eA = 275 
+Beams:eB = 18 
+
+PDF:lepton2gamma = on
+Photon:ProcessType = 0 
+Photon:Q2max = 1
+HardQCD:all = on
+PhotonParton:all = on 
+PhaseSpace:pThatMin = 10. 
+MultipartonInteractions:pT0Ref = 3. 
+
+Diffraction:doHard = on 
+Diffraction:sampleType = 1 
+Diffraction:hardDiffSide = 2 
+SigmaDiffractive:PomFlux = 7 
+PDF:PomSet = 6 
