@@ -35,7 +35,7 @@ def fastjet_antikt_clustering(in_filename:str, out_filename:str):
             jpz.append(ak.Array(jet_output,with_name="Momentum4D").pz)
             jE.append(ak.Array(jet_output,with_name="Momentum4D").E)
             jpt.append(ak.Array(jet_output,with_name="Momentum4D").pt)
-            jeta.append(ak.Array(jet_output,with_name="Momentum4D").eta) #PSEUDORAPIDITY
+            jeta.append(ak.Array(jet_output,with_name="Momentum4D").eta)
             jphi.append(ak.Array(jet_output,with_name="Momentum4D").phi)
             
             constituent_output=partial_cluster.constituents(min_pt=jpt_cut)
