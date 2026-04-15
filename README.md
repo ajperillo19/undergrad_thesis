@@ -16,4 +16,5 @@ The workflow for this thesis can be decomposed into three primary objectives:
 
 Therefore, in this repository you will find **pythia_gen.py** which generates 1M events in batches of 25k, thus producing 40 pickle files. This is done for memory management as
 I found that trying to generate 1M events continuously would crash my kernel. Moreover, **clust_gen.py** applies the anti-kt clustering algorithm to these pickle files. 
-**analysis.py** then performs a physics analysis on these files.
+**analysis.py** then performs a physics analysis on these files. Please note that this will not work out of the box if you wish to clone this repository for your own use as I
+specify directory paths that are unique to my local machine, but feel free to use this to inform Pythia/FastJet analyses.
