@@ -1,7 +1,7 @@
 # :one: Welcome!
 ---
 
-**`undergrad_thesis'** is a collection of python modules that I used during the making of my undergraduate thesis. For my thesis, I worked under Sevil Salur simulating
+**`undergrad_thesis`** is a collection of python modules that I used during the making of my undergraduate thesis. For my thesis, I worked under Sevil Salur simulating
 ep collisions with initial kinematics that are representative of proposed beam energy settings for the future Electron-Ion Collider (EIC). The main focus of
 my thesis was investigating the jets created in these events, specifically how one can use generalized angularity functions (GAFs) to distinguish between quark-
 and gluon-initiated jets.
